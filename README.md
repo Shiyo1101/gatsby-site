@@ -4,27 +4,29 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal TypeScript Starter
+  Gatsby 用いたサイト
 </h1>
 
-## 🚀 Quick start
+## 🚀 クイックスタート
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+1.  **リポジトリのクローン**
 
     ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
+    git clone https://github.com/Shiyo1101/gatsby-site.git
     ```
 
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
+2.  **Start developing**
 
     ```shell
     cd my-gatsby-site/
-    npm run develop
+    npm run develop 
+    ```
+
+    or
+
+    ```shell
+    cd my-gatsby-site/
+    gatsby develop 
     ```
 
 3.  **Open the code and start customizing!**
