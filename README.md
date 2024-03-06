@@ -4,12 +4,12 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby 用いたサイト
+  Gatsby を用いたサイト
 </h1>
 
-## 🚀 クイックスタート
+## 🚀 Quick start
 
-1.  **リポジトリのクローン**
+1.  **Clone repository**
 
     ```shell
     git clone https://github.com/Shiyo1101/gatsby-site.git
