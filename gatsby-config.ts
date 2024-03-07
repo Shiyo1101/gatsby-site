@@ -1,15 +1,50 @@
-import type { GatsbyConfig } from "gatsby";
+import * as path from 'path'
+
+import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `My Gatsby Site`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Gatsby Site`,
+    description: `****`,
+    siteUrl: `****`,
+    image: `***`,
+    themeColor: `#FFFFFF`,
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-sass"]
-};
+  plugins: [
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: '/',
+      },
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-root-import`,
+      options: {
+        '@': path.join(__dirname, 'src'),
+      },
+    },
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [
+          'https://fonts.googleapis.com',
+          'https://fonts.gstatic.com',
+        ],
+        web: [
+          {
+            name: 'Noto Sans JP',
+            file: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap',
+          },
+        ],
+      },
+    },
+  ],
+}
 
-export default config;
+export default config
